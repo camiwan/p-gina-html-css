@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		const user = form.username.value;
 		const pw = form.password.value;
 		
-		if(user === 'admin' && pw === 'admin'){
+		if(user === 'wadmin' && pw === 'wadmin'){
 			localStorage.setItem('isLoggedIn','true');
 			window.location.href = 'index.html';
 		}else{
