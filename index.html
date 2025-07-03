@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Html, css e javaScript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/stylesv2.css">
+  <link rel="stylesheet" href="css/tabelaAgendamentos.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">  
+  
+</head>
+
+<body>
+  <header>
+      <h1>Sistema de Agendamento</h1>
+	  <button id="logout-button">Sair</button>
+  </header>
+  <section>
+    <nav>
+	  <div class="nav-toggle" aria-label="Alternar menu"></div>
+	  <ul>
+	    <li><a href="home"        id="link-home">Home</a></li>
+		  <li><a href="cadastro"    id="link-cadastro">Cadastro</a></li>
+		  <li><a href="paciente"    id="link-paciente">Pacientes</a></li>
+		  <li><a href="medico"      id="link-medico">Medicos</a></li>
+		  <li><a href="agenda"      id="link-agenda">Agendamentos</a></li>
+      <li><a href="tbl-valores" id="link-tblValores">Tabela de Valores</a></li>		  
+	  </ul>
+	</nav>
+	<article>
+	  <div id="home-content">
+	    <h1>Conteúdo</h1>
+	  <p>Sistema de Agendamento de Consultas</p>
+	  </div>
+	  <div id="cadastro-content">
+      <h2>Cadastro</h2>
+      <div> <p><a href="#">Cadastrar Medicos</a></p>  </div>
+      <div><p><a href="#">Cadastrar Pacientes</a></p> </div>
+      <div><p><a href="#">Cadastrar Especialidades</a></p> </div>
+    </div>
+	  <div id="paciente-content">
+	     <h2>PACIENTES</h2>
+       <div class="container-novoPaciente data-table"></div>
+	     <table id="tabela-pacientes" class="data-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Celular</th>
+                    <th>CPF</th>
+                    <th style="text-align: center;">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+	  </div>
+	  <div id="medico-content">
+	     <h2>MÉDICOS</h2>
+       <div class="container-novoMedico data-table"></div>
+	     <table id="tabela-medicos" class="data-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CRM</th>
+                    <th>Especialidade</th>
+                    <th>Valor da Consulta</th>
+                    <th style="text-align: center;">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+	  </div>
+	  <div id="agenda-content">
+      <p>AGENDAMENTOS</p><br>
+      <!-- Tabela de agendamentos montada dinamicamente -->
+      <table id="tabela-agendamentos" class="data-table">
+       
+      </table>
+
+    </div>
+    <div id="tbl-valores">
+	    <h1>Tabela de Valores</h1>
+      <table id="tabela-valores" class="data-table">
+        <thead>
+            <tr>
+                <th>Especialidade</th>
+                <th>Valor</th>                
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+	  
+	  </div>
+	  
+	  
+	</article>
+  </section>
+  
+  <!-- <script src="js/requisicao_api.js"></script> -->
+  
+  <script type="module" src="api/medicos-api.js"></script>
+  <script type="module" src="api/pacientes-api.js"></script>
+  <script src="api/agendamentos-api.js"></script>
+  <script src="api/editar-agendamento-api.js"></script>
+  <script src="api/deletar-agendamento-api.js"></script>
+  <script type="module" src="js/botoes.js"></script>
+  <script src="js/myScript.js"></script>
+  <script src="js/navegacao.js"></script>
+  <!--<script src="js/navegacao_nav.js"></script>-->
+  <script src="js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script> 
+ 
+  
+</body>
+</html>
